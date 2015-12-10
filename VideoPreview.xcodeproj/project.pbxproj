@@ -13,6 +13,8 @@
 		8A7FB6351C195BD30041061B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A7FB6331C195BD30041061B /* MainMenu.xib */; };
 		8A7FB6401C195BD30041061B /* VideoPreviewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7FB63F1C195BD30041061B /* VideoPreviewTests.m */; };
 		8A7FB64B1C195BD40041061B /* VideoPreviewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7FB64A1C195BD40041061B /* VideoPreviewUITests.m */; };
+		8A7FB65A1C195C440041061B /* VideoPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7FB6591C195C440041061B /* VideoPreviewView.m */; };
+		8A7FB65C1C195FC40041061B /* source.html in Resources */ = {isa = PBXBuildFile; fileRef = 8A7FB65B1C195FC40041061B /* source.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,9 @@
 		8A7FB6461C195BD30041061B /* VideoPreviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoPreviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A7FB64A1C195BD40041061B /* VideoPreviewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoPreviewUITests.m; sourceTree = "<group>"; };
 		8A7FB64C1C195BD40041061B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A7FB6581C195C440041061B /* VideoPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPreviewView.h; sourceTree = "<group>"; };
+		8A7FB6591C195C440041061B /* VideoPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPreviewView.m; sourceTree = "<group>"; };
+		8A7FB65B1C195FC40041061B /* source.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = source.html; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +107,9 @@
 				8A7FB6331C195BD30041061B /* MainMenu.xib */,
 				8A7FB6361C195BD30041061B /* Info.plist */,
 				8A7FB62E1C195BD30041061B /* Supporting Files */,
+				8A7FB6581C195C440041061B /* VideoPreviewView.h */,
+				8A7FB6591C195C440041061B /* VideoPreviewView.m */,
+				8A7FB65B1C195FC40041061B /* source.html */,
 			);
 			path = VideoPreview;
 			sourceTree = "<group>";
@@ -237,6 +245,7 @@
 			files = (
 				8A7FB6321C195BD30041061B /* Assets.xcassets in Resources */,
 				8A7FB6351C195BD30041061B /* MainMenu.xib in Resources */,
+				8A7FB65C1C195FC40041061B /* source.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A7FB6301C195BD30041061B /* main.m in Sources */,
+				8A7FB65A1C195C440041061B /* VideoPreviewView.m in Sources */,
 				8A7FB62D1C195BD30041061B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,10 +401,13 @@
 		8A7FB6501C195BD40041061B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = VideoPreview/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.digiarty.VideoPreview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -403,10 +416,13 @@
 		8A7FB6511C195BD40041061B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = VideoPreview/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.digiarty.VideoPreview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

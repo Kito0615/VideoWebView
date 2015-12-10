@@ -1,0 +1,74 @@
+<html>
+<!-- this is the source page of webview   -->
+    <head>
+        <link href="http://vjs.zencdn.net/4.10/video-js.css" rel="stylesheet">
+            <script src="http://vjs.zencdn.net/4.10/video.js">
+                </script>
+            </head>
+    <body style="margin:0">
+        <div id="player_div">
+        </div>
+    </body>
+    <script type="text/javascript">
+        function player_resize() {
+            var player = videojs("player", {
+                                 "thechOrder": ["flash", "html"],
+                                 "autoplay": false,
+                                 "controlBar": false,
+                                 "bigPlayButton": false
+                                 });
+                                 player.width(document.body.clientWidth);
+                                 player.height(document.body.clientHeight);
+        }
+    player_resize();
+    window.onresize = player_resize;
+    
+    function pauseVideo(){
+        var player = videojs("player");
+        player.pause();
+    }
+
+    
+    function playVideo(){
+        var player = videojs("player");
+        player.play();
+    }
+
+    
+    function stopVideo(){
+        var player = videojs("player");
+        player.currentTime(0);
+        player.pause();
+    }
+    
+    function setVolume(volume){
+        var player = videojs("player");
+        player.volume(volume);
+    }
+    
+    function volume(){
+        var player = videojs("player");
+        var volumeLevel = player.volume();
+        var volumeString = volumeLevel.toString();
+        return volumeString;
+    }
+    
+    function setProgress(progress){
+        var player = videojs("player");
+        var duration = player.duration();
+        player.currentTime(duration * progress);
+        
+    }
+    
+    function progress(){
+        
+        var player = videojs("player");
+        var where = player.currentTime();
+        var total = player.duration();
+        var progress = where / total;
+        var whereString = progress.toString();
+        return  whereString;
+    }
+        </script>
+    
+</html>
